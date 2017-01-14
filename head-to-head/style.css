@@ -1,0 +1,369 @@
+body{
+	background-color: #fff;
+	white-space: nowrap;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.Clear {
+	clear: both;
+	height: 0;
+	display: block;
+}
+
+#FullWrapper {
+	width: 1280px;
+	height: 720px;
+	display: block;
+	overflow: hidden;
+	margin: 0 auto;
+	position: relative;
+	top: calc((100% - 720px) / 2);
+	background-image: url(./site/bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+	display: inline-block;
+
+	/*cursor: none;*/
+}
+
+#FullWrapper > div {
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+
+#FullWrapper .Home {
+	background-image: url(./site/homescreen.jpg);
+}
+
+.PlayNow {
+	position: absolute;
+	bottom: 112px;
+	left: calc(50% - 112px);
+	width: 224px;
+	height: 64px;
+	display: block;
+	margin: 5px;
+	background-image: url(./site/play-now.png);
+}
+
+.PlayNow.active {
+	border: 5px solid #fff;
+	margin: 0;
+	border-radius: 20px;
+}
+
+
+/***** LOADING *****/
+#FullWrapper .Loading {
+	background-image: url(./site/loading.jpg);
+}
+
+.Loading .Car {
+	position: absolute;
+	top: 50%;
+	/*left: 30%;*/
+	left: -1000px;
+	transform: translate(-50%, -50%);
+}
+
+.Loading .Quote {
+	position: absolute;
+	right: 61px;
+	top: 169px;
+	display: none;
+}
+
+.Loading .loading1 {
+	position: absolute;
+	left: 768px;
+	top: 454px;
+}
+
+.Loading .loading2 {
+	position: absolute;
+	left: 768px;
+	top: 504px;
+	display: none;
+}
+
+.loading2 .dots {
+	display: block;
+	margin-bottom: 15px;
+}
+
+.loading2 .dots span {
+	width: 18px;
+	height: 18px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 18px;
+	display: inline-block;
+	margin-right: 12px;
+}
+
+.loading2 .dots span.empty {
+	background-color: rgba(255,255,255,0);
+}
+
+/***** READY, SET, GO *****/
+.Ready-Set-Go {
+	background-image: url(./site/ready-set-go.jpg);
+}
+
+.Ready, .Set, .Go {
+	position: absolute;
+	top: calc((656px - 38px) / 2);
+	display: block;
+	width: 100%;
+	text-align: center;
+	display: none;
+	height: inherit;
+}
+
+.Go {
+	top: calc((656px - 54px) / 2);
+}
+
+.Ready img, .Set img, .Go img{
+	height: 0;
+	width: auto;
+}
+
+/***** STD *****/
+
+.SpotTheDifference {
+	background-image: url(./site/std.jpg);
+}
+
+.SpotTheDifference .Game {
+	position: absolute;
+	top: 88px;
+	left: 23px;
+	width: 1233px;
+	height: 459px;
+}
+
+.SpotTheDifference .Game .Incorrect {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+	display: none;
+}
+
+.SpotTheDifference .Game .Incorrect img {
+	position: relative;
+	top: 200px;
+}
+
+.SpotTheDifference .Game .Left {
+	position: relative;
+	height: 459px;
+	width: 612px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	float: left;
+	overflow: hidden;
+}
+
+.SpotTheDifference .Game .Right {
+	position: relative;
+	height: 459px;
+	width: 613px;
+	display: inline-block;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	float: right;
+	overflow: hidden;
+}
+
+.SpotTheDifference .Game .Left.blueify, .SpotTheDifference .Game .Right.blueify {
+	background-color: #004a98;
+	background-blend-mode: multiply;
+}
+
+.SpotTheDifference .Game .Spot {
+	height: 86px;
+	width: 86px;
+	display: block;
+	border: 6px solid rgba(232,28,36,0);
+	border-radius: 74px;
+	position: absolute;
+}
+
+.SpotTheDifference .Timer {
+	height: 148px;
+	width: 148px;
+	display: block;
+	position: absolute;
+	left: 36px;
+	bottom: 9px;
+}
+
+.SpotTheDifference .Timer img {
+	height: 100%;
+	width: 100%;
+}
+
+.SpotTheDifference .Missed > img, .SpotTheDifference .Found > img {
+	display: inline-block;
+	margin: 5px;
+	vertical-align: middle;
+}
+
+.SpotTheDifference img.inactive {
+	opacity: 0.3;
+	filter: alpha(opacity=30); /* For IE8 and earlier */
+}
+
+.SpotTheDifference .Missed {
+	position: absolute;
+	top: 580px;
+	left: 251px;
+}
+
+.SpotTheDifference .Found {
+	position: absolute;
+	top: 580px;
+	left: 703px;
+}
+
+.SpotTheDifference .Count {
+	display: inline-block;
+	vertical-align: middle;
+	height: 17px;
+	overflow: hidden;
+}
+
+.SpotTheDifference .Count img {
+	display: block;
+}
+
+/***** GAME OVER *****/
+
+.GameOver {
+	background-image: url(./site/std.jpg);
+}
+
+.GameOver .Message {
+	width: 100%;
+	height: 656px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+
+.GameOver .Message img {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);	
+}
+
+/***** SPINNER *****/
+.Circles {
+	position: relative;
+	top: 20px;
+	text-align: center;
+}
+.circle {
+	background-color: rgba(0,0,0,0);
+	border: 5px solid rgba(0,183,229,0.9);
+	border: 5px solid rgba(255,255,255,0.7);
+
+	border-top: 5px solid rgba(255,255,255,0.7);
+	border-bottom: 5px solid rgba(255,255,255,0.7);
+	opacity: .9;
+	border-right: 5px solid rgba(0,0,0,0);
+	border-left: 5px solid rgba(0,0,0,0);
+	border-radius: 50px;
+	box-shadow: 0 0 35px #fff;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	-moz-animation: spinPulse 2s infinite ease-in-out;
+	-webkit-animation: spinPulse 2s infinite linear;
+}
+
+.circle1 {
+	background-color: rgba(0,0,0,0);
+	border: 5px solid rgba(0,183,229,0.9);
+	border: 5px solid rgba(255,255,255,0.7);
+
+	border-top: 5px solid rgba(255,255,255,0.7);
+	border-bottom: 5px solid rgba(255,255,255,0.7);
+	opacity: .9;
+	border-left: 5px solid rgba(0,0,0,0);
+	border-right: 5px solid rgba(0,0,0,0);
+	border-radius: 50px;
+	box-shadow: 0 0 15px #fff;
+	width: 30px;
+	height: 30px;
+	margin: 0 auto;
+	position: relative;
+	top: -50px;
+	-moz-animation: spinoffPulse 2s infinite linear;
+	-webkit-animation: spinoffPulse 1s infinite linear;
+}
+
+@-moz-keyframes spinPulse {
+	0% {
+		-moz-transform: rotate(160deg);
+		opacity: 0;
+		box-shadow: 0 0 1px #fff;
+	}
+
+	50% {
+		-moz-transform: rotate(145deg);
+		opacity: 1;
+	}
+
+	100% {
+		-moz-transform: rotate(-320deg);
+		opacity: 0;
+	};
+}
+
+@-moz-keyframes spinoffPulse {
+	0% {
+		-moz-transform: rotate(0deg);
+	}
+
+	100% {
+		-moz-transform: rotate(360deg);
+	};
+}
+
+@-webkit-keyframes spinPulse {
+	0% {
+		-webkit-transform: rotate(160deg);
+		opacity: 0;
+		box-shadow: 0 0 1px #fff;
+	}
+
+	50% {
+		-webkit-transform: rotate(145deg);
+		opacity: 1;
+	}
+
+	100% {
+		-webkit-transform: rotate(-320deg);
+		opacity: 0;
+	};
+}
+
+@-webkit-keyframes spinoffPulse {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+	};
+}
